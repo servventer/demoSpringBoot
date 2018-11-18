@@ -10,11 +10,19 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @EnableAutoConfiguration
 public class DemoApplication {
+	Product prd = new Product();
 
 	@RequestMapping("/")
 	String home() {
-		Product prd = new Product();
-		return "Hello World " + prd.get();
+		return "Welcome to the Demo Springboot Application, there are some nice methods to call";
+	}
+	@RequestMapping("/getName")
+	String getName() {
+		return "Hello World " + prd.getName();
+	}
+	@RequestMapping("/setName")
+	void setName(String name) {
+		prd.setName(name);
 	}
 
 	public static void main(String[] args) {

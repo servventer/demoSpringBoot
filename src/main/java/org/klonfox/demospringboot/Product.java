@@ -1,11 +1,13 @@
 package org.klonfox.demospringboot;
 
-
 public class Product {
 
-    private String str = "Serv Venter";
+    private String name = null;
 
-    public String get(){
-        return str;
+    public void setName(String str){
+        name = str;
+    }
+    public String getName(){
+        return name;
     }
 }
